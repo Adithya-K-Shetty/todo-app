@@ -17,10 +17,10 @@
     <div id="myVueTemp">
         <input :class="[inputTextFieldStyle,'firstInput']" type="text" placeholder="Enter Title(day name)" v-model="userInput" v-on:keypress="setKeys">
         <h3 class="customTitle">{{ userInput }}</h3>
-        <input type="text" class="secondInput" v-model="myTodo">
+        <input type="text" class="secondInput" v-model="myTodo" placeholder="hr:min-todo">
         <button class="btn" @click="setTodo">Add</button>
         <ul>
-            <li class="listElem" v-for="todo in todoArray"><span class="todoItems">{{ todo }}</span></li>
+            <li class="listElem" v-for="todo in todoArray" @click="removeItem(index)"><span class="todoItems">{{ todo }}</span></li>
 
         </ul>
     </div>

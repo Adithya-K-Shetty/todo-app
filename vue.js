@@ -24,6 +24,9 @@ let myApp = Vue.createApp({
         setTodo() {
             this.todoArray.push(this.myTodo);
         },
+        removeItem(index) {
+            this.todoArray.splice(index, 1);
+        }
     },
 
 
