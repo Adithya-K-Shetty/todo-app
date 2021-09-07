@@ -61,3 +61,23 @@
         background-color: transparent;
         color: #F1F1F1;
     }
+    
+    .listElem {
+        list-style-type: circle;
+        margin-top: 40px;
+        margin-left: 45%;
+        font-size: 36px;
+        font-family: 'Pacifico', cursive;
+        color: #27E648;
+    }
+    
+    .todoItems {
+        border: 1px solid #27E648;
+        border-radius: 20px;
+        padding: 10px;
+        color: #F1F1F1;
+    }
+    
+    .hideInputTextField {
+        visibility: hidden;
+    }

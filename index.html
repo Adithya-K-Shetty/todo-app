@@ -15,10 +15,14 @@
 <body>
     <h1 id="title"><span class="mainHeading">My Todo List</span></h1>
     <div id="myVueTemp">
-        <input class="firstInput" type="text" placeholder="Enter Title(day name)" v-model="userInput">
+        <input :class="[inputTextFieldStyle,'firstInput']" type="text" placeholder="Enter Title(day name)" v-model="userInput" v-on:keypress="setKeys">
         <h3 class="customTitle">{{ userInput }}</h3>
-        <input type="text" class="secondInput">
-        <button class="btn">Add</button>
+        <input type="text" class="secondInput" v-model="myTodo">
+        <button class="btn" @click="setTodo">Add</button>
+        <ul>
+            <li class="listElem" v-for="todo in todoArray"><span class="todoItems">{{ todo }}</span></li>
+
+        </ul>
     </div>
     <script src="https://unpkg.com/vue@next"></script>
     <script src="vue.js"></script>
